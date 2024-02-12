@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag calculator manasip44/java_calculator:latest'
+                    sh 'docker tag java_calculator manasip44/java_calculator:latest'
                     sh 'docker push manasip44/java_calculator'
                     }
                  }
