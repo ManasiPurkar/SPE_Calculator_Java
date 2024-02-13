@@ -22,6 +22,7 @@
         </dependency>
     </dependencies>
     <build>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
 
             <plugin>
@@ -50,6 +51,18 @@
                 </executions>
                 <configuration>
                     <mainClass>org.example.Main</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <!-- other Surefire configurations -->
                 </configuration>
             </plugin>
         </plugins>
