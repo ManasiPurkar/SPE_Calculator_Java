@@ -47,6 +47,16 @@ pipeline {
                 }
             }
         }
+  stage('Run Test Cases')
+    {
+        steps {
+                // Run JUnit tests
+                script {
+                    sh 'mvn test'
+                }
+            }
+    }
+
     }
     post {
         success {
