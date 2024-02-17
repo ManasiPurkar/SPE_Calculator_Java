@@ -16,6 +16,14 @@ pipeline {
                 }
             }
         }
+        stage('Build Maven Project') {
+            steps {
+                script {
+                    // Checkout the code from the GitHub repository
+                    sh 'mvn clean install'
+                }
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
