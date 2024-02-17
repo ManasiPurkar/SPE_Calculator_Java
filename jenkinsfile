@@ -19,7 +19,7 @@ pipeline {
         stage('Build Maven Project') {
             steps {
                 script {
-                    // Checkout the code from the GitHub repository
+                    // Build Maven Project
                     sh 'mvn clean install'
                 }
             }
