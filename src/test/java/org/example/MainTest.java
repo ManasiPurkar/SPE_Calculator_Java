@@ -18,7 +18,7 @@ class MainTest {
         long result = Main.factorial(5);
         assertEquals(120, result);
     }
-/*
+
     @org.junit.jupiter.api.Test
     public void testNaturalLogarithmFunction() {
         double result = Main.naturalLogarithm(2.71828);
@@ -30,5 +30,5 @@ class MainTest {
         double result = Main.power(2, 3);
         assertEquals(8, result, 0.0001);
     }
-    */
+    
 }
